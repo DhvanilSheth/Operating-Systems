@@ -1,0 +1,30 @@
+diff -r -u linux-original/Makefile linux-Custom/Makefile
+--- linux-original/Makefile	2022-09-15 08:47:20.000000000 +0000
++++ linux-Custom/Makefile	2022-11-20 13:20:28.090000000 +0000
+@@ -1100,7 +1100,7 @@
+ export MODULES_NSDEPS := $(extmod_prefix)modules.nsdeps
+ 
+ ifeq ($(KBUILD_EXTMOD),)
+-core-y			+= kernel/ certs/ mm/ fs/ ipc/ security/ crypto/
++core-y			+= kernel/ certs/ mm/ fs/ ipc/ security/ crypto/ TwoD_syscall/
+ core-$(CONFIG_BLOCK)	+= block/
+ core-$(CONFIG_IO_URING)	+= io_uring/
+ 
+Only in linux-Custom: OneD_syscall
+Only in linux-Custom: TwoD_syscall
+diff -r -u linux-original/arch/x86/entry/syscalls/syscall_64.tbl linux-Custom/arch/x86/entry/syscalls/syscall_64.tbl
+--- linux-original/arch/x86/entry/syscalls/syscall_64.tbl	2022-09-15 08:47:20.000000000 +0000
++++ linux-Custom/arch/x86/entry/syscalls/syscall_64.tbl	2022-11-20 13:20:52.260000000 +0000
+@@ -372,7 +372,7 @@
+ 448	common	process_mrelease	sys_process_mrelease
+ 449	common	futex_waitv		sys_futex_waitv
+ 450	common	set_mempolicy_home_node	sys_set_mempolicy_home_node
+-
++451	common	TwoD_system_call	sys_kernel_2d_memcpy
+ #
+ # Due to a historical design error, certain syscalls are numbered differently
+ # in x32 as compared to native x86_64.  These syscalls have numbers 512-547.
+Only in linux-Custom: hello_syscall
+Only in linux-Custom/tools/objtool/arch/x86: lib
+Only in linux-Custom/tools/objtool: fixdep
+Only in linux-Custom/tools/objtool: objtool

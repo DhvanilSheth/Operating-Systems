@@ -1,0 +1,31 @@
+Common subdirectories: linux-original/Documentation and linux-Custom/Documentation
+Common subdirectories: linux-original/LICENSES and linux-Custom/LICENSES
+diff linux-original/Makefile linux-Custom/Makefile
+1103c1103
+< core-y			+= kernel/ certs/ mm/ fs/ ipc/ security/ crypto/
+---
+> core-y			+= kernel/ certs/ mm/ fs/ ipc/ security/ crypto/ TwoD_syscall/
+Only in linux-Custom: OneD_syscall
+Only in linux-Custom: TwoD_syscall
+Common subdirectories: linux-original/arch and linux-Custom/arch
+Common subdirectories: linux-original/block and linux-Custom/block
+Common subdirectories: linux-original/certs and linux-Custom/certs
+Common subdirectories: linux-original/crypto and linux-Custom/crypto
+Common subdirectories: linux-original/drivers and linux-Custom/drivers
+Common subdirectories: linux-original/fs and linux-Custom/fs
+Only in linux-Custom: hello_syscall
+Common subdirectories: linux-original/include and linux-Custom/include
+Common subdirectories: linux-original/init and linux-Custom/init
+Common subdirectories: linux-original/io_uring and linux-Custom/io_uring
+Common subdirectories: linux-original/ipc and linux-Custom/ipc
+Common subdirectories: linux-original/kernel and linux-Custom/kernel
+Common subdirectories: linux-original/lib and linux-Custom/lib
+Common subdirectories: linux-original/mm and linux-Custom/mm
+Common subdirectories: linux-original/net and linux-Custom/net
+Common subdirectories: linux-original/samples and linux-Custom/samples
+Common subdirectories: linux-original/scripts and linux-Custom/scripts
+Common subdirectories: linux-original/security and linux-Custom/security
+Common subdirectories: linux-original/sound and linux-Custom/sound
+Common subdirectories: linux-original/tools and linux-Custom/tools
+Common subdirectories: linux-original/usr and linux-Custom/usr
+Common subdirectories: linux-original/virt and linux-Custom/virt
